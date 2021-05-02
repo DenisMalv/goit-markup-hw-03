@@ -1,0 +1,286 @@
+/* <================ ""MAIN" content styles==============> */
+:root {
+  /* Text color variable */
+  --text-color-accent: #2196f3;
+  --text-color-standart: #757575;
+  --text-color-black: #000000;
+  --text-color-head-black: #212121;
+  --text-color-h-black: #212121;
+  --text-color-h-white: #ffffff;
+  --text-color-address-map: #ffffff;
+  --text-color-address-link: rgba(255, 255, 255, 0.6);
+
+  /* button color variable */
+  --button-text-color: #212121;
+  --button-active-text-color: #ffffff;
+  --button-bcgr-color: #f5f4fa;
+  --button-active-bcgr-color: #2196f3;
+
+  /* background color variable */
+  --color-footer-backgr: #2f303a;
+}
+/* <===== Плавный скрол между header and footer ====> */
+/* 
+html {
+  scroll-behavior: smooth;
+} 
+*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  /* or 171% */
+  letter-spacing: 0.03em;
+
+  color: var(--text-color-standart);
+}
+/* <=================== page Studio ===================> */
+
+/* <------------------ header ------------------> */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.15;
+
+  text-decoration: none;
+  color: var(--text-color-black);
+  scroll-behavior: smooth;
+}
+.logo-web {
+  color: var(--text-color-accent);
+}
+.nav {
+}
+.nav-item {
+  list-style: none;
+}
+.nav-item-link {
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+  color: var(--text-color-head-black);
+}
+.nav-item-link:hover,
+.nav-item-link:focus {
+  color: var(--text-color-accent);
+}
+.nav-item-link-current {
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+  color: var(--text-color-accent);
+}
+.head-cont {
+  list-style: none;
+}
+.head-cont-item {
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color-standart);
+}
+.head-cont-item:hover,
+.head-cont-item:focus {
+  color: var(--text-color-accent);
+}
+
+/* <------------------- hero side ----------------> */
+.hero {
+  background-color: #2f303a;
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  /* or 136% */
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--text-color-h-white);
+}
+.hero-button {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  /* identical to box height, or 187% */
+  /* display: flex;
+  align-items: center;
+  text-align: center; */
+
+  letter-spacing: 0.06em;
+  color: var(--button-active-text-color);
+  background-color: var(--button-active-bcgr-color);
+  cursor: pointer;
+}
+.hero-prefs {
+}
+.prefs {
+  list-style: none;
+}
+.prefs-item {
+}
+.prefs-item-h {
+  font-weight: bold;
+  line-height: 1.15;
+  text-transform: uppercase;
+
+  color: var(--text-color-h-black);
+}
+.prefs-item-p {
+  /* this style's in our body */
+}
+
+/* <------------------- what we do ------------------> */
+.wedo {
+}
+.wedo-h {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+
+  color: var(--text-color-h-black);
+}
+.wedo-list {
+  list-style: none;
+}
+.wedo-item {
+}
+
+/* <-------------------our team-------------------> */
+.team {
+}
+.team-h {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+
+  color: var(--text-color-h-black);
+}
+.team-list {
+  list-style: none;
+}
+.team-item {
+}
+.team-item-i {
+}
+.team-item-h {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  /*---------------- identical to box height ????????????? */
+  /* text-align: center; */
+
+  color: var(--text-color-h-black);
+}
+.team-item-p {
+  font-size: 16px;
+  line-height: 1.2px;
+
+  /* text-align: center; */
+  color: var(--text-color-standart);
+}
+
+/* <--------------------footer-------------------> */
+.footer {
+  background-color: var(--color-footer-backgr);
+}
+.footer-adress {
+}
+.footer-adress-list {
+  list-style: none;
+}
+.footer-adress-item {
+  /* or 171% */
+}
+.footer-adress-map {
+  font-style: normal;
+  /* or 171% */
+
+  color: var(--text-color-address-map);
+  text-decoration: none;
+}
+.footer-adress-map:hover,
+.footer-adress-map:focus {
+  color: var(--text-color-accent);
+}
+.footer-adress-cont {
+  font-style: normal;
+
+  color: var(--text-color-address-link);
+  text-decoration: none;
+}
+.footer-adress-cont:hover,
+.footer-adress-cont:focus {
+  color: var(--text-color-accent);
+}
+
+/* <==========  page Portfolio "different styles" ========> */
+.hiden-title {
+  visibility: hidden;
+}
+
+/* <---------portfolio buttons --------> */
+.portf-buttons {
+  list-style: none;
+}
+.buttons {
+}
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  /* identical to box height, or 162% */
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--button-text-color);
+  background-color: var(--button-bcgr-color);
+
+  /* border-radius: 4px; */
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  color: var(--button-active-text-color);
+  background-color: var(--button-active-bcgr-color);
+}
+
+/* <-----------portfolio card list-----------> */
+.portf {
+}
+.portf-list {
+  list-style: none;
+}
+.portf-item {
+}
+.portf-img {
+}
+.portf-h {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+
+  letter-spacing: 0.06em;
+
+  color: var(--text-color-h-black);
+}
+.portf-p {
+  font-size: 16px;
+  line-height: 1.87;
+
+  color: var(--text-color-standart);
+}
