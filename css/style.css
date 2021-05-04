@@ -40,6 +40,8 @@ body {
 /* <=================== page Studio ===================> */
 
 /* <------------------ header ------------------> */
+.header {
+}
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
