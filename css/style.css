@@ -26,6 +26,19 @@ html {
 } 
 */
 
+/*<================ Global stylesheets ===========> */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -38,9 +51,28 @@ body {
   color: var(--text-color-standart);
 }
 /* <=================== page Studio ===================> */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid orange;
+}
 
 /* <------------------ header ------------------> */
 .header {
+}
+.head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.head-nav {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: center;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -51,14 +83,24 @@ body {
   text-decoration: none;
   color: var(--text-color-black);
   scroll-behavior: smooth;
+
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .logo-web {
   color: var(--text-color-accent);
 }
 .nav {
+  display: flex;
+  flex-direction: row;
 }
 .nav-item {
   list-style: none;
+  margin-right: 50px;
+}
+.nav-item:last-child {
+  margin-right: 0;
 }
 .nav-item-link {
   font-weight: 500;
@@ -82,6 +124,10 @@ body {
 }
 .head-cont {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 16px;
 }
 .head-cont-item {
   font-weight: 500;
@@ -89,6 +135,8 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--text-color-standart);
+
+  margin-left: 50px;
 }
 .head-cont-item:hover,
 .head-cont-item:focus {
