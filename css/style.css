@@ -11,6 +11,12 @@
   --text-color-address-link: rgba(255, 255, 255, 0.6);
 
   /* button color variable */
+  /* <-------button-hero-----------> */
+  --button-hero-text-color: #ffffff;
+  --button-hero-backgr-color: #2196f3;
+  --button-hero-text-active-color: #ffffff;
+  --button-hero-bacgr-active-color: #188ce8;
+  /* <--------button-portfolio-------> */
   --button-text-color: #212121;
   --button-active-text-color: #ffffff;
   --button-bcgr-color: #f5f4fa;
@@ -69,6 +75,9 @@ body {
 
 /* <------------------ header ------------------> */
 .header {
+  border-bottom: 1px solid #ececec;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .head-container {
   display: flex;
@@ -208,8 +217,8 @@ footer .logo {
   /* identical to box height, or 187% */
 
   letter-spacing: 0.06em;
-  color: var(--button-active-text-color);
-  background-color: var(--button-active-bcgr-color);
+  color: var(--button-hero-text-color);
+  background-color: var(--button-hero-backgr-color);
   cursor: pointer;
 
   display: inline-block;
@@ -219,6 +228,11 @@ footer .logo {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   margin-bottom: 106px;
+}
+.hero-button:hover,
+.hero-button:focus {
+  color: var(--button-hero-text-active-color);
+  background-color: var(--button-hero-bacgr-active-color);
 }
 /* <----------------webstudio prefs -----------------> */
 .prefs {
