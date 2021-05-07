@@ -258,7 +258,7 @@ footer .logo {
 }
 .prefs-item-h {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.15;
   text-transform: uppercase;
 
@@ -271,19 +271,19 @@ footer .logo {
 }
 
 /* <------------------- what we do ------------------> */
-.wedo {
+.what-wedo {
 }
 .wedo-h {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 
-  color: var(--text-color-h-black);
+  color: var(--text-color-black);
 
   margin-bottom: 50px;
 }
-.wedo-list {
+.wedo {
   font-size: 0;
   list-style: none;
 
@@ -305,20 +305,20 @@ footer .logo {
 }
 
 /* <-------------------our team-------------------> */
-.team {
+.our-team {
   background-color: var(--color-ourteam-backgr);
 }
 .team-h {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 
-  color: var(--text-color-h-black);
+  color: var(--text-color-black);
 
   margin-bottom: 50px;
 }
-.team-list {
+.team {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -355,7 +355,7 @@ footer .logo {
   /*---------------- identical to box height ????????????? */
   text-align: center;
 
-  color: var(--text-color-h-black);
+  color: var(--text-color-black);
 
   display: block;
   margin-bottom: 10px;
