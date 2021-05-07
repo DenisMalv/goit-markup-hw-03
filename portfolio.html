@@ -15,17 +15,17 @@
 
 <body>
     <!-- шапка -->
-    <header>
+    <header class="header">
         <!-- навигация -->
-        <nav id="page_top">
+        <nav id="page_top" class="head-nav">
             <a class="logo" href="#page_top" lang="en"> <span class="logo-web">Web</span>Studio</a>
-            <ul class="nav">
+            <ul class="nav list">
                 <li class="nav-item"><a class="nav-item-link" href="./index.html">Студия</a></li>
                 <li class="nav-item"><a class="nav-item-link-current" href="./portfolio.html">Портфолио</a></li>
                 <li class="nav-item"><a class="nav-item-link" href="#page_bottom">Контакты</a></li>
             </ul>
         </nav>
-        <ul class="head-cont">
+        <ul class="head-cont list">
             <li><a class="head-cont-item" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
             <li><a class="head-cont-item" href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
@@ -33,12 +33,12 @@
         <!-- main content  -->
     <main>
         <!-- filter content section -->
-        <section class='portf'>
+        <section class='section portfolio'>
             <!-- hiden title -->
             <h1 class='hiden-title'>Портфолио</h2>
             <h2 class='hiden-title'>Фильтр работ</h1>
             <!-- hiden title -->
-            <ul class='portf-buttons'>
+            <ul class='portf-buttons list'>
                 <li class='buttons'>
                     <button class='button' type="button">Все</button>
                 </li>
@@ -55,50 +55,69 @@
                     <button class='button' type="button">Маркетинг</button>
                 </li>
             </ul>
-            <ul class='portf-list'>
-                <li class='portf-item'> 
-                    <img class='portf-img' src="./Images/portfolio/technocrack.jpg" alt="ноутбук с сайтом">
-                    <h3  class='portf-h'>Технокряк</h3>
-                    <p class='portf-p'>Веб-Сайт</p> 
+            <ul class='portf list'>
                 <li class='portf-item'>
-                    <img class='portf-img' src="./Images/portfolio/poster.jpg" alt="постер с баскетбольным матчем">
-                    <h3 class='portf-h'>Постер New Orlean vs Golden Star</h3>
-                    <p class='portf-p'>Дизайн</p>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/technocrack.jpg" alt="ноутбук с сайтом">
+                        <h3  class='portf-h'>Технокряк</h3>
+                        <p class='portf-p'>Веб-Сайт</p> 
+                    </a>
                 </li>
                 <li class='portf-item'>
-                    <img class='portf-img' src="./Images/portfolio/seafood.jpg" alt="Постер ресторана Seafood">
-                    <h3 class='portf-h'>Ресторан Seafood</h3>
-                    <p class='portf-p'>Приложение</p>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/poster.jpg" alt="постер с баскетбольным матчем">
+                        <h3 class='portf-h'>Постер New Orlean vs Golden Star</h3>
+                        <p class='portf-p'>Дизайн</p>
+                    </a>
                 </li>
                 <li class='portf-item'>
-                    <img class='portf-img' src="./Images/portfolio/prime.jpg" alt="Наушники">
-                    <h3 class='portf-h'>Проект Prime</h3>
-                    <p class='portf-p'>Маркетинг</p>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/seafood.jpg" alt="Постер ресторана Seafood">
+                        <h3 class='portf-h'>Ресторан Seafood</h3>
+                        <p class='portf-p'>Приложение</p>
+                    </a>
                 </li>
                 <li class='portf-item'>
-                    <img class='portf-img' src="./Images/portfolio/boxes.jpg" alt="2 коробки">
-                    <h3 class='portf-h'>Проект Boxes</h3>
-                    <p class='portf-p'>Приложение</p>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/prime.jpg" alt="Наушники">
+                        <h3 class='portf-h'>Проект Prime</h3>
+                        <p class='portf-p'>Маркетинг</p>
+                    </a>
                 </li>
                 <li class='portf-item'>
-                    <img class='portf-img' src="./Images/portfolio/noborders.jpg" alt="Компьютер с картой">
-                    <h3 class='portf-h' lang="en">Inspiration has no Borders</h3>
-                    <p class='portf-p'>Веб-сайт</p>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/boxes.jpg" alt="2 коробки">
+                        <h3 class='portf-h'>Проект Boxes</h3>
+                        <p class='portf-p'>Приложение</p>
+                    </a>
                 </li>
                 <li class='portf-item'>
-                    <img class='portf-img' src="./Images/portfolio/limitededition.jpg" alt="Открытая книга">
-                    <h3 class='portf-h'>Издание Limited Edition</h3>
-                    <p class='portf-p'>Дизайн</p>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/noborders.jpg" alt="Компьютер с картой">
+                        <h3 class='portf-h' lang="en">Inspiration has no Borders</h3>
+                        <p class='portf-p'>Веб-сайт</p>
+                    </a>
                 </li>
                 <li class='portf-item'>
-                    <img class='portf-img' src="./Images/portfolio/lab.jpg" alt="Ярлык LAB EL TAG">
-                    <h3 class='portf-h'>Проект LAB</h3>
-                    <p class='portf-p'>Маркетинг</p>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/limitededition.jpg" alt="Открытая книга">
+                        <h3 class='portf-h'>Издание Limited Edition</h3>
+                        <p class='portf-p'>Дизайн</p>
+                    </a>
                 </li>
                 <li class='portf-item'>
-                    <img class='portf-img' src="./Images/portfolio/busines.jpg" alt="Человек работает на ноутбуке">
-                    <h3 class='portf-h' lang="en">Growing Business</h3>
-                    <p class='portf-p'>Приложение</p>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/lab.jpg" alt="Ярлык LAB EL TAG">
+                        <h3 class='portf-h'>Проект LAB</h3>
+                        <p class='portf-p'>Маркетинг</p>
+                    </a>
+                </li>
+                <li class='portf-item'>
+                    <a class="portf-list link" href="">
+                        <img class='portf-img' src="./Images/portfolio/busines.jpg" alt="Человек работает на ноутбуке">
+                        <h3 class='portf-h' lang="en">Growing Business</h3>
+                        <p class='portf-p'>Приложение</p>
+                    </a>
                 </li>
             </ul>
         </section>
@@ -106,9 +125,9 @@
     </main> 
         <!-- футер -->
     <footer class='footer'>
-        <a class="logo" href="#page_top" lang="en"> <span class="logo-web">Web</span>Studio</a><br>
+        <a class="logo white" href="#page_top" lang="en"> <span class="logo-web">Web</span>Studio</a><br>
         <address class='footer-adress'>
-            <ul id="page_bottom" class='footer-adress-list'>
+            <ul id="page_bottom" class='adress list'>
                     <li class='footer-adress-item'>
                         <a class='footer-adress-map' href="https://goo.gl/maps/jqeXpjSZVA85hrm66" rel="noreferrer noopener">г. Киев, пр-т
                             Леси Украинки, 26</a>

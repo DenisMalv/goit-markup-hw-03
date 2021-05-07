@@ -3,35 +3,29 @@
   /* Text color variable */
   --text-color-accent: #2196f3;
   --text-color-standart: #757575;
-  --text-color-black: #000000;
-  --text-color-head-black: #212121;
-  --text-color-h-black: #212121;
-  --text-color-h-white: #ffffff;
-  --text-color-address-map: #ffffff;
+  --text-color-pureblack: #000000;
+  --text-color-black: #212121;
+  --text-color-white: #ffffff;
   --text-color-address-link: rgba(255, 255, 255, 0.6);
 
   /* button color variable */
+
   /* <-------button-hero-----------> */
-  --button-hero-text-color: #ffffff;
-  --button-hero-backgr-color: #2196f3;
-  --button-hero-text-active-color: #ffffff;
+  --button-backgr-color: #2196f3;
   --button-hero-bacgr-active-color: #188ce8;
   /* <--------button-portfolio-------> */
-  --button-text-color: #212121;
-  --button-active-text-color: #ffffff;
   --button-bcgr-color: #f5f4fa;
   --button-active-bcgr-color: #2196f3;
 
   /* background color variable */
-  --color-ourteam-backgr: #f5f4fa;
+  --color-team-backgr: #f5f4fa;
   --color-footer-backgr: #2f303a;
 }
 /* <===== Плавный скрол между header and footer ====> */
-/* 
+
 html {
   scroll-behavior: smooth;
-} 
-*/
+}
 
 /*<================ Global stylesheets ===========> */
 h1,
@@ -57,7 +51,17 @@ body {
 
   color: var(--text-color-standart);
 }
-/* <=================== page Studio ===================> */
+
+.hiden-title {
+  font-size: 0;
+  visibility: hidden;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -78,6 +82,7 @@ body {
   background-color: red;
   outline: 1px solid orange;
 }
+/* <=================== page Studio ===================> */
 
 /* <------------------ header ------------------> */
 .header {
@@ -97,12 +102,12 @@ body {
 }
 header .logo {
   font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.15;
 
   text-decoration: none;
-  color: var(--text-color-black);
+  color: var(--text-color-pureblack);
   scroll-behavior: smooth;
 
   margin-right: 93px;
@@ -111,12 +116,12 @@ header .logo {
 }
 footer .logo {
   font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.15;
 
   text-decoration: none;
-  color: var(--text-color-black);
+  color: var(--text-color-white);
   scroll-behavior: smooth;
 
   display: inline-block;
@@ -131,7 +136,6 @@ footer .logo {
   flex-direction: row;
 }
 .nav-item {
-  list-style: none;
 }
 .nav-item + .nav-item {
   margin-left: 50px;
@@ -146,7 +150,7 @@ footer .logo {
   letter-spacing: 0.02em;
 
   text-decoration: none;
-  color: var(--text-color-head-black);
+  color: var(--text-color-black);
 }
 .nav-item-link:hover,
 .nav-item-link:focus {
@@ -167,10 +171,8 @@ footer .logo {
 .head-cont {
   display: flex;
   margin-left: auto;
-
-  list-style: none;
 }
-.head-cont-link {
+.cont {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -186,8 +188,8 @@ footer .logo {
 .head-cont-item + .head-cont-item {
   margin-left: 50px;
 }
-.head-cont-link:hover,
-.head-cont-link:focus {
+.cont:hover,
+.cont:focus {
   color: var(--text-color-accent);
 }
 
@@ -205,7 +207,7 @@ footer .logo {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  color: var(--text-color-h-white);
+  color: var(--text-color-white);
 
   width: 696px;
   padding-top: 106px;
@@ -219,14 +221,14 @@ footer .logo {
 }
 .hero-button {
   font-family: inherit;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   /* identical to box height, or 187% */
 
   letter-spacing: 0.06em;
-  color: var(--button-hero-text-color);
-  background-color: var(--button-hero-backgr-color);
+  color: var(--text-color-white);
+  background-color: var(--button-backgr-color);
   cursor: pointer;
 
   display: inline-block;
@@ -237,7 +239,7 @@ footer .logo {
 }
 .hero-button:hover,
 .hero-button:focus {
-  color: var(--button-hero-text-active-color);
+  color: var(--text-color-white);
   background-color: var(--button-hero-bacgr-active-color);
 }
 /* <----------------webstudio prefs -----------------> */
@@ -260,7 +262,7 @@ footer .logo {
   line-height: 1.15;
   text-transform: uppercase;
 
-  color: var(--text-color-h-black);
+  color: var(--text-color-black);
 
   margin-bottom: 10px;
 }
@@ -320,20 +322,28 @@ footer .logo {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
+
 .team-item {
   font-size: 0;
 
   /* outline: 1px solid orange; */
-  /* display: flex; */
-  /* align-items: center;
-  flex-direction: column; */
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  margin-bottom: 30px;
 }
 .team-item + .team-item {
   margin-left: 30px;
+}
+.team-item:nth-child(4n + 1) {
+  margin-left: 0;
+}
+.team-item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
 }
 .team-item-i {
   margin-bottom: 30px;
@@ -402,10 +412,6 @@ footer .logo {
 }
 
 /* <==========  page Portfolio "different styles" ========> */
-.hiden-title {
-  font-size: 0;
-  visibility: hidden;
-}
 
 /* <---------portfolio buttons --------> */
 .portf-buttons {
