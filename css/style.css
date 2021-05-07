@@ -68,19 +68,19 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid orange;
+  /* outline: 1px solid orange; */
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: aqua;
-  outline: 1px solid orange;
+  /* background-color: aqua;
+  outline: 1px solid orange; */
 }
 .section:nth-child(3) {
   padding-top: 0px;
   padding-bottom: 94px;
-  background-color: red;
-  outline: 1px solid orange;
+  /* background-color: red; */
+  /* outline: 1px solid orange; */
 }
 /* <=================== page Studio ===================> */
 
@@ -88,7 +88,7 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 .head-container {
   display: flex;
@@ -414,8 +414,15 @@ footer .logo {
 
 /* <---------portfolio buttons --------> */
 .portf-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .buttons {
+  margin-bottom: 50px;
+}
+.buttons + .buttons {
+  margin-left: 8px;
 }
 .button {
   font-family: 'Roboto', sans-serif;
@@ -429,9 +436,16 @@ footer .logo {
   color: var(--text-color-black);
   background-color: var(--button-bcgr-color);
 
-  /* border-radius: 4px; */
+  display: inline-block;
+  border: transparent;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 22px;
+  padding-right: 22px;
   cursor: pointer;
 }
+
 .button:hover,
 .button:focus {
   color: var(--text-color-white);
@@ -442,22 +456,47 @@ footer .logo {
 .portfolio {
 }
 .portf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 .portf-list {
   display: inline-block;
 }
 .portf-item {
+  width: calc((100% - 60px) / 3);
+  /* width: 370px; */
+  border: 1px solid #eeeeee;
+  margin-bottom: 30px;
+}
+.portf-item + .portf-item {
+  margin-left: 30px;
+}
+.portf-item:nth-child(3n + 1) {
+  margin-left: 0px;
+}
+.portf-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
 }
 .portf-img {
+  font-size: 0;
+}
+.card-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 .portf-h {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-
   letter-spacing: 0.06em;
 
   color: var(--text-color-black);
+
+  margin-bottom: 4px;
 }
 .portf-p {
   font-size: 16px;
