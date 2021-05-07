@@ -306,7 +306,7 @@ footer .logo {
 
 /* <-------------------our team-------------------> */
 .our-team {
-  background-color: var(--color-ourteam-backgr);
+  background-color: var(--color-team-backgr);
 }
 .team-h {
   font-weight: 700;
@@ -378,8 +378,7 @@ footer .logo {
 .footer-adress {
   padding-bottom: 60px;
 }
-.footer-adress-list {
-  list-style: none;
+.adress {
 }
 .footer-adress-item {
   margin-bottom: 9px;
@@ -393,7 +392,7 @@ footer .logo {
   font-style: normal;
   /* or 171% */
 
-  color: var(--text-color-address-map);
+  color: var(--text-color-white);
   text-decoration: none;
 }
 .footer-adress-map:hover,
@@ -415,7 +414,6 @@ footer .logo {
 
 /* <---------portfolio buttons --------> */
 .portf-buttons {
-  list-style: none;
 }
 .buttons {
 }
@@ -428,7 +426,7 @@ footer .logo {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--button-text-color);
+  color: var(--text-color-black);
   background-color: var(--button-bcgr-color);
 
   /* border-radius: 4px; */
@@ -436,28 +434,30 @@ footer .logo {
 }
 .button:hover,
 .button:focus {
-  color: var(--button-active-text-color);
+  color: var(--text-color-white);
   background-color: var(--button-active-bcgr-color);
 }
 
 /* <-----------portfolio card list-----------> */
+.portfolio {
+}
 .portf {
 }
 .portf-list {
-  list-style: none;
+  display: inline-block;
 }
 .portf-item {
 }
 .portf-img {
 }
 .portf-h {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
 
   letter-spacing: 0.06em;
 
-  color: var(--text-color-h-black);
+  color: var(--text-color-black);
 }
 .portf-p {
   font-size: 16px;
