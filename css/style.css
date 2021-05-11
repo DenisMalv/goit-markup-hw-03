@@ -39,7 +39,9 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+img {
+  display: block;
+}
 body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -68,28 +70,37 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 1px solid orange; */
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  /* background-color: aqua;
-  outline: 1px solid orange; */
 }
-.section:nth-child(3) {
+.section-half-bottom {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+.section-half-top {
+  padding-top: 47px;
+  padding-bottom: 94px;
+}
+
+/*      вариант секции падинга секции wedo 
+ .section:nth-child(3) {
   padding-top: 0px;
   padding-bottom: 94px;
-  /* background-color: red; */
-  /* outline: 1px solid orange; */
-}
+*/
+
 /* <=================== page Studio ===================> */
 
 /* <------------------ header ------------------> */
 .header {
-  border-bottom: 1px solid #ececec;
   background: #ffffff;
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  border-bottom: 1px solid #ececec;
 }
+.header-shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .head-container {
   display: flex;
   flex-direction: row;
@@ -108,7 +119,6 @@ header .logo {
 
   text-decoration: none;
   color: var(--text-color-pureblack);
-  scroll-behavior: smooth;
 
   margin-right: 93px;
   padding-top: 24px;
@@ -122,7 +132,6 @@ footer .logo {
 
   text-decoration: none;
   color: var(--text-color-white);
-  scroll-behavior: smooth;
 
   display: inline-block;
   padding-top: 60px;
@@ -156,10 +165,12 @@ footer .logo {
 .nav-item-link:focus {
   color: var(--text-color-accent);
 }
+
 .nav-item-link-current {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
 
   font-weight: 500;
   line-height: 1.15;
@@ -167,6 +178,18 @@ footer .logo {
 
   text-decoration: none;
   color: var(--text-color-accent);
+}
+.nav-item-link-current:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 77px;
+  left: 0px;
+
+  border-radius: 2px;
+
+  background-color: var(--button-backgr-color);
 }
 .head-cont {
   display: flex;
@@ -249,6 +272,9 @@ footer .logo {
   flex-direction: row;
   justify-content: space-between;
 }
+.section .prefs {
+  padding-bottom: 0;
+}
 .prefs-item {
   /* width: 270px; */
   width: calc((100%-90px) / 4);
@@ -284,7 +310,6 @@ footer .logo {
   margin-bottom: 50px;
 }
 .wedo {
-  font-size: 0;
   list-style: none;
 
   display: flex;
@@ -327,8 +352,6 @@ footer .logo {
 }
 
 .team-item {
-  font-size: 0;
-
   /* outline: 1px solid orange; */
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -417,13 +440,22 @@ footer .logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  /* margin-right: auto; */
 }
 .buttons {
-  margin-bottom: 50px;
+  margin-bottom: 8px;
 }
 .buttons + .buttons {
   margin-left: 8px;
 }
+.buttons:nth-child(9n + 1) {
+  margin-left: 0;
+}
+.buttons:nth-last-child(-n + 9) {
+  margin-bottom: 0;
+}
+
 .button {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -450,6 +482,8 @@ footer .logo {
 .button:focus {
   color: var(--text-color-white);
   background-color: var(--button-active-bcgr-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* <-----------portfolio card list-----------> */
@@ -460,15 +494,22 @@ footer .logo {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+
+  margin-top: 50px;
 }
 .portf-list {
-  display: inline-block;
 }
+
 .portf-item {
+  display: block;
   width: calc((100% - 60px) / 3);
   /* width: 370px; */
   border: 1px solid #eeeeee;
   margin-bottom: 30px;
+}
+.portf-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portf-item + .portf-item {
   margin-left: 30px;
@@ -480,7 +521,6 @@ footer .logo {
   margin-bottom: 0px;
 }
 .portf-img {
-  font-size: 0;
 }
 .card-title {
   margin-top: 20px;
