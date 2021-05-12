@@ -55,14 +55,26 @@ body {
 }
 
 .hiden-title {
-  font-size: 0;
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .link {
   text-decoration: none;
 }
 .list {
   list-style: none;
+}
+.flex {
+  display: flex;
 }
 .container {
   width: 1200px;
@@ -102,38 +114,29 @@ body {
 }
 
 .head-container {
-  display: flex;
-  flex-direction: row;
   align-items: center;
 }
 .head-nav {
-  display: flex;
-  flex-direction: flex;
   align-items: center;
 }
-header .logo {
+.logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.15;
 
-  text-decoration: none;
+  display: inline-block;
+}
+.header .logo {
   color: var(--text-color-pureblack);
 
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
 }
-footer .logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.15;
-
-  text-decoration: none;
+.footer .logo {
   color: var(--text-color-white);
 
-  display: inline-block;
   padding-top: 60px;
   margin-bottom: 20px;
 }
@@ -141,15 +144,13 @@ footer .logo {
   color: var(--text-color-accent);
 }
 .nav {
-  display: flex;
-  flex-direction: row;
 }
 .nav-item {
 }
 .nav-item + .nav-item {
   margin-left: 50px;
 }
-.nav-item-link {
+.item {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -158,11 +159,10 @@ footer .logo {
   line-height: 1.15;
   letter-spacing: 0.02em;
 
-  text-decoration: none;
   color: var(--text-color-black);
 }
-.nav-item-link:hover,
-.nav-item-link:focus {
+.item:hover,
+.item:focus {
   color: var(--text-color-accent);
 }
 
@@ -183,7 +183,6 @@ footer .logo {
   background-color: var(--button-backgr-color);
 }
 .head-cont {
-  display: flex;
   margin-left: auto;
 }
 .cont {
@@ -258,9 +257,6 @@ footer .logo {
 }
 /* <----------------webstudio prefs -----------------> */
 .prefs {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .section .prefs {
@@ -301,10 +297,6 @@ footer .logo {
   margin-bottom: 50px;
 }
 .wedo {
-  list-style: none;
-
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 .wedo-item {
@@ -313,14 +305,14 @@ footer .logo {
 .wedo-item + .wedo-item {
   margin-left: 30px;
 }
-/* тест переполнение контента */
+/* ==== тест переполнение контента ==== */
 .wedo-item:nth-child(3n + 1) {
   margin-left: 0;
 }
 .wedo-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-/* тест переполнение контента */
+/* ==== тест переполнение контента ==== */
 
 /* <-------------------our team-------------------> */
 .our-team {
@@ -337,9 +329,6 @@ footer .logo {
   margin-bottom: 50px;
 }
 .team {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
 }
@@ -352,17 +341,17 @@ footer .logo {
 
   margin-bottom: 30px;
 }
+/* ==== тест переполнение контента ==== */
 .team-item + .team-item {
   margin-left: 30px;
 }
-/* тест переполнение контента */
 .team-item:nth-child(4n + 1) {
   margin-left: 0;
 }
 .team-item:nth-last-child(-n + 4) {
   margin-bottom: 0;
 }
-/* тест переполнение контента */
+/* ==== тест переполнение контента ==== */
 .team-item-i {
   margin-bottom: 30px;
 }
@@ -411,7 +400,6 @@ footer .logo {
   /* or 171% */
 
   color: var(--text-color-white);
-  text-decoration: none;
 }
 .footer-adress-map:hover,
 .footer-adress-map:focus {
@@ -421,7 +409,6 @@ footer .logo {
   font-style: normal;
 
   color: var(--text-color-address-link);
-  text-decoration: none;
 }
 .footer-adress-cont:hover,
 .footer-adress-cont:focus {
@@ -432,8 +419,6 @@ footer .logo {
 
 /* <---------portfolio buttons --------> */
 .portf-buttons {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   /* margin-right: auto; */
@@ -487,8 +472,6 @@ footer .logo {
 .portfolio {
 }
 .portf {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
 
@@ -508,6 +491,7 @@ footer .logo {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+/* ==== тест переполнение контента ==== */
 .portf-item + .portf-item {
   margin-left: 30px;
 }
@@ -517,6 +501,8 @@ footer .logo {
 .portf-item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
+/* ==== тест переполнение контента ==== */
+
 .portf-img {
 }
 .card-title {
