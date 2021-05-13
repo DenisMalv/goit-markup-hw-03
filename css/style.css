@@ -284,6 +284,7 @@ body {
 .prefs-item + .prefs-item {
   margin-left: 30px;
 } */
+
 .prefs-item-h {
   font-size: 14px;
   font-weight: 700;
@@ -429,7 +430,7 @@ body {
   color: var(--text-color-standart);
 
   display: block;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 /* <--------------------footer-------------------> */
@@ -440,10 +441,13 @@ body {
   padding-bottom: 60px;
 }
 .footer-adress {
+  display: inline-block;
+  max-width: 240px;
 }
 .adress {
 }
 .footer-adress-item {
+  display: inline-block;
   margin-bottom: 9px;
   /* or 171% */
 }
