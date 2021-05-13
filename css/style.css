@@ -35,7 +35,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -108,6 +109,9 @@ body {
 .header {
   background: #ffffff;
   border-bottom: 1px solid #ececec;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .header-shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -131,13 +135,12 @@ body {
   color: var(--text-color-pureblack);
 
   margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
 }
 .footer .logo {
   color: var(--text-color-white);
 
-  padding-top: 60px;
   margin-bottom: 20px;
 }
 .logo-web {
@@ -152,8 +155,8 @@ body {
 }
 .item {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   font-weight: 500;
   line-height: 1.15;
@@ -175,7 +178,7 @@ body {
   position: absolute;
   width: 100%;
   height: 4px;
-  top: 77px;
+  top: 53px;
   left: 0px;
 
   border-radius: 2px;
@@ -187,8 +190,8 @@ body {
 }
 .cont {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   font-weight: 500;
   line-height: 1.15;
@@ -256,19 +259,31 @@ body {
   background-color: var(--button-hero-bacgr-active-color);
 }
 /* <----------------webstudio prefs -----------------> */
-.prefs {
+/*  ======== Вариант расположения элементов №1 =========
+ .prefs {
   justify-content: space-between;
+} */
+
+/* ========= Вариант расположения элементов №2 ========== */
+.prefs {
 }
-.section .prefs {
+.container .prefs {
   padding-bottom: 0;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 .prefs-item {
   /* width: 270px; */
-  width: calc((100%-90px) / 4);
-}
-.prefs-item + .prefs-item {
+  width: calc((100% - 120px) / 4);
+
+  margin-top: 30px;
   margin-left: 30px;
 }
+
+/*  =========== Вариант расположения элементов №3 ========
+.prefs-item + .prefs-item {
+  margin-left: 30px;
+} */
 .prefs-item-h {
   font-size: 14px;
   font-weight: 700;
@@ -286,6 +301,7 @@ body {
 /* <------------------- what we do ------------------> */
 .what-wedo {
 }
+
 .wedo-h {
   font-weight: 700;
   font-size: 36px;
@@ -296,23 +312,42 @@ body {
 
   margin-bottom: 50px;
 }
+
 .wedo {
   flex-wrap: wrap;
+
+  margin-top: -30px;
+  margin-left: -30px;
 }
+
+.wedo-item {
+  width: calc((100% - 90px) / 3);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/* =========== Вариант расположения элементов №2 ========
+.wedo {
+  justify-content: space-between;
+} 
+.wedo-item {
+
+}*/
+
+/*  =========== Вариант расположения элементов №3 =======
 .wedo-item {
   margin-bottom: 30px;
 }
 .wedo-item + .wedo-item {
   margin-left: 30px;
 }
-/* ==== тест переполнение контента ==== */
+
 .wedo-item:nth-child(3n + 1) {
   margin-left: 0;
 }
 .wedo-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
-}
-/* ==== тест переполнение контента ==== */
+} */
 
 /* <-------------------our team-------------------> */
 .our-team {
@@ -331,17 +366,36 @@ body {
 .team {
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .team-item {
-  /* outline: 1px solid orange; */
+  background-color: #ffffff;
+
+  margin-top: 30px;
+  margin-left: 30px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* =========== Вариант расположения элементов №2 =======
+.team {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between; 
+}*/
+
+/* =========== Вариант расположения элементов №3 =======
+.team-item {
+  outline: 1px solid orange; 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
   margin-bottom: 30px;
 }
-/* ==== тест переполнение контента ==== */
+
 .team-item + .team-item {
   margin-left: 30px;
 }
@@ -351,7 +405,7 @@ body {
 .team-item:nth-last-child(-n + 4) {
   margin-bottom: 0;
 }
-/* ==== тест переполнение контента ==== */
+*/
 .team-item-i {
   margin-bottom: 30px;
 }
@@ -381,9 +435,11 @@ body {
 /* <--------------------footer-------------------> */
 .footer {
   background-color: var(--color-footer-backgr);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-adress {
-  padding-bottom: 60px;
 }
 .adress {
 }
@@ -421,22 +477,31 @@ body {
 .portf-buttons {
   justify-content: center;
   flex-wrap: wrap;
-  /* margin-right: auto; */
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-bottom: 50px;
 }
+.buttons {
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.button {
+}
+
+/* ========== Вариант расположения элементов №2 ========== 
 .buttons {
   margin-bottom: 8px;
 }
 .buttons + .buttons {
   margin-left: 8px;
 }
-/* тест переполнение контента */
+
 .buttons:nth-child(9n + 1) {
   margin-left: 0;
 }
 .buttons:nth-last-child(-n + 9) {
   margin-bottom: 0;
-}
-/* тест переполнение контента */
+} */
 
 .button {
   font-family: 'Roboto', sans-serif;
@@ -474,24 +539,31 @@ body {
 .portf {
   flex-wrap: wrap;
   align-items: flex-start;
-
-  margin-top: 50px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 .portf-list {
 }
 
 .portf-item {
   display: block;
-  width: calc((100% - 60px) / 3);
-  /* width: 370px; */
-  border: 1px solid #eeeeee;
-  margin-bottom: 30px;
+  width: calc((100% - 90px) / 3);
+  margin-top: 30px;
+  margin-left: 30px;
 }
+
 .portf-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/* ==== тест переполнение контента ==== */
+
+/*========== Вариант расположения элементов №2 ==========
+.portf-item {
+  display: block;
+  width: calc((100% - 60px) / 3);
+  border: 1px solid #eeeeee;
+  margin-bottom: 30px;
+}
 .portf-item + .portf-item {
   margin-left: 30px;
 }
@@ -500,16 +572,19 @@ body {
 }
 .portf-item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
-}
-/* ==== тест переполнение контента ==== */
+} */
 
 .portf-img {
 }
 .card-title {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 .portf-h {
   font-weight: 700;
