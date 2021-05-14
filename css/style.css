@@ -117,7 +117,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.head-container {
+.header .container {
   align-items: center;
 }
 .head-nav {
@@ -212,6 +212,8 @@ body {
 /* <------------------- hero side ----------------> */
 .hero {
   background-color: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -226,14 +228,12 @@ body {
   color: var(--text-color-white);
 
   width: 696px;
-  padding-top: 106px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
 }
-.hero-button-position {
+.hero .container {
   text-align: center;
-  padding-bottom: 106px;
 }
 .hero-button {
   font-family: inherit;
@@ -275,7 +275,6 @@ body {
 .prefs-item {
   /* width: 270px; */
   width: calc((100% - 120px) / 4);
-
   margin-top: 30px;
   margin-left: 30px;
 }
@@ -374,6 +373,7 @@ body {
 .team-item {
   background-color: #ffffff;
 
+  width: calc((100% - 120px) / 4);
   margin-top: 30px;
   margin-left: 30px;
   border-radius: 0px 0px 4px 4px;
@@ -408,7 +408,11 @@ body {
 }
 */
 .team-item-i {
-  margin-bottom: 30px;
+}
+
+.team-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .team-item-h {
   font-weight: 500;
@@ -430,7 +434,6 @@ body {
   color: var(--text-color-standart);
 
   display: block;
-  padding-bottom: 30px;
 }
 
 /* <--------------------footer-------------------> */
