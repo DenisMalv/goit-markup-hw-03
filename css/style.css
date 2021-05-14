@@ -411,8 +411,7 @@ body {
 }
 
 .team-description {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
 }
 .team-item-h {
   font-weight: 500;
